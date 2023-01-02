@@ -56,6 +56,10 @@ difficultyButtons.forEach(button => {
     button.addEventListener("click", startQuiz);
 });
 
+let score = 0;
+let remaining = 0;
+let currentQuestion = 0;
+let difficulty = "";
 const quizContainer = document.querySelector("#quiz-container");
 
 function startQuiz(event) {
@@ -68,8 +72,11 @@ function startQuiz(event) {
         return;
     }
 
+   
     document.getElementById("quiz-form").style.display = "none";
-    document.querySelector("#score").style.display = "inline";
-    document.querySelector("#remaining").style.display = "inline";
-    showQuestion();
+    document.querySelector("#score").style.display = "block";
+    document.querySelector("#remaining").style.display = "block";
+    document.querySelector("#user-div").style.display = "block";
+   document.getElementById("names").innerHTML = username;
+       showQuestion();
 }

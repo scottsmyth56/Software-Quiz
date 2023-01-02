@@ -49,6 +49,6 @@ button {
     text-align: center;
 }
 
-#score , #remaining{
+#score , #remaining ,#user-div{
     display: none;
 }
