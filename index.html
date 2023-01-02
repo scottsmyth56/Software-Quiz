@@ -11,8 +11,7 @@
 
 
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="script.js"></script>
-
+    
 
     <title>Software Savvy Quiz</title>
 </head>
@@ -24,18 +23,26 @@
         <div id="title">Software Savvy Quiz</div>
 
         <p class="info">Test your Software knowledge with this savvy quiz! </p>
-        <p class="info">when your ready choose your difficulty and the game will start</p>
+        <p class="info">When your ready choose your difficulty and the game will start</p>
         <div id="username-form">
             <label for="username">Enter your username:</label>
-            <input type="text" id="username" name="username">
+            <input type="text" id="username" name="username" required>
         </div>
         <div id="difficulty-buttons">
-            <button value="easy" id="easy">Easy</button>
-            <button value="medium" id="medium">Medium</button>
-            <button value="hard" id="hard">Hard</button>
+            <button value="easy" id="easy" class="difficulty-btn">Easy</button>
+            <button value="medium" id="medium" class="difficulty-btn">Medium</button>
+            <button value="hard" id="hard" class="difficulty-btn">Hard</button>
         </div>
     </div>
-    <script src="script.js"></script>
+
+    <div id="score">Score: <span id="score-value">0</span></div>
+<div id="remaining">Questions remaining: <span id="remaining-value">0</span></div>
+<div id="quiz-container">
+
+
+</div>
+
+<script src="script.js"></script>
 </body>
 
 
