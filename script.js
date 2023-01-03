@@ -50,7 +50,8 @@ const quiz = {
             answer: 0
         }
     ],
-    medium: [{
+    medium: [
+        {
             prompt: "One or more defects occurring in the computer software that prevents the software from working is called",
             choices: ["bot", "system error", "bug", "slug"],
             answer: 2
@@ -127,19 +128,80 @@ const quiz = {
             answer: 3
         }
     ],
-    hard: [{
-
+    hard: [
+        {
+            prompt: "Which of the following is not an OOPS concept in Java?",
+            choices: [
+                "Polymorphism",
+                "Inheritance",
+                "Compilation",
+                "Encapsulation"],
+            answer: 2
         },
         {
-            prompt: "",
-            choices: [""],
-            answer: 0
+            prompt: "What is Truncation in Java?",
+            choices: [
+                "Floating-point value assigned to a Floating type",
+                "Floating-point value assigned to an integer type",
+                "Integer value assigned to floating type",
+                "Integer value assigned to floating type"],
+            answer: 1
         },
         {
-            prompt: "",
-            choices: [""],
-            answer: 0
-        }
+            prompt: "Which was the first purely object oriented programming language developed?",
+            choices: [
+                "Kotlin",
+                "SmallTalk",
+                "Java",
+                "C++"],
+            answer: 1
+        },
+        {
+            prompt: "Which of the following is a feature of DBMS?",
+            choices: [
+                "Minimum Duplication and Redundancy of Data",
+                "High Level of Security",
+                "Single-user Access only",
+                "Support ACID Property"],
+            answer: 2
+        },
+        {
+            prompt: "What is information about data called?",
+            choices: [
+                "Hyper data",
+                "Tera data",
+                "Meta data",
+                "Relations"],
+            answer: 2
+        },
+        {
+            prompt: "Agile Software Development is based on which of the following type?",
+            choices: [
+                "Iterative Development",
+                "Incremental Development",
+                "Both Incremental and Iterative Development",
+                "Linear Development"],
+            answer: 2
+        },
+        {
+            prompt: "In multilevel inheritance, which is the most significant feature of OOP used?",
+            choices: [
+                "Code efficiency",
+                "Code readability",
+                "Flexibility",
+                "Code reusability"],
+            answer: 3
+        },
+        {
+            prompt: "What happens when an object is passed by reference?",
+            choices: [
+                "Destructor is called at end of function",
+                "Destructor is called when called explicitly",
+                "Destructor is not called",
+                "Destructor is called when function is out of scope"],
+            answer: 2
+        },
+       
 
     ]
 };
