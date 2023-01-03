@@ -27,7 +27,7 @@ const quiz = {
         {
             prompt: "Which HTML tag is used to define an internal style sheet?",
             choices: ["<style>", "<css>", "<link>", "<script>"],
-            answer: 2
+            answer: 0
         },
         {
             prompt: "Java can run on any computer platform that has a ...?",
@@ -37,7 +37,7 @@ const quiz = {
         {
             prompt: "Which HTML tag hyperlinks text?",
             choices: ["DIV", "A", "IFRAME", "BR"],
-            answer: 2
+            answer: 1
         },
         {
             prompt: "Which of the following shows the construction of an object?",
@@ -47,29 +47,88 @@ const quiz = {
                 "final int STOP = -999;",
                 "int value = c.input.readint();"
             ],
-            answer: 2
+            answer: 0
         }
     ],
     medium: [{
-            prompt: "",
-            choices: [""],
+            prompt: "One or more defects occurring in the computer software that prevents the software from working is called",
+            choices: ["bot", "system error", "bug", "slug"],
+            answer: 2
+        },
+        {
+            prompt: "What is a framework in software development?",
+            choices: [
+                "A set of tools and libraries for building software application",
+                "A specific way of organizing and structuring code",
+                "A tool for debugging code",
+                "A set of design patterns for building software applications"
+            ],
             answer: 0
         },
         {
-            prompt: "",
-            choices: [""],
+            prompt: "What is a database index?",
+            choices: [
+                "A way of sorting data in a database for faster searches",
+                "A copy of the database for backup purposes",
+                "A graphical representation of the data in a database",
+                "A tool for optimizing the performance of a database"
+            ],
             answer: 0
         },
         {
-            prompt: "",
-            choices: [""],
-            answer: 0
+            prompt: "What is a software design pattern?",
+            choices: [
+                "A technique for testing the functionality of a software application",
+                "A standardized solution to a common software design problem",
+                "A tool for visualizing the structure of a software system",
+                "A way of organizing and structuring code"
+            ],
+
+            answer: 1
+        },
+        {
+            prompt: "What is a software development kit (SDK)?",
+            choices: [
+                "A tool for debugging code",
+                "A specific way of organizing and structuring code",
+                "A set of tools and libraries for building software applications",
+                "All of the above"
+            ],
+            answer: 2
+        },
+        {
+            prompt: "What is a distributed version control system?",
+            choices: [
+                "A version control system that stores code on a central server",
+                "A version control system that stores code locally on a developer's machine",
+                "A version control system that stores code on multiple servers",
+                "A version control system that stores code in the cloud"
+            ],
+            answer: 2
+        },
+        {
+            prompt: "What is a software requirement specification (SRS)?",
+            choices: [
+                "A document that outlines the testing plan for a software project",
+                "A document that outlines the design of a software project",
+                "A document that outlines the requirements and constraints for a software project",
+                "All of the above"
+            ],
+            answer: 2
+        },
+        {
+            prompt: "What is a software development life cycle (SDLC)?",
+            choices: [
+                "The process of designing, implementing, and maintaining software",
+                "The process of debugging, testing, and maintaining software",
+                "The process of creating and maintaining documentation for a software project",
+                "The process of planning, creating, testing, and maintaining software"
+            ],
+            answer: 3
         }
     ],
     hard: [{
-            prompt: "",
-            choices: [""],
-            answer: 0
+
         },
         {
             prompt: "",
