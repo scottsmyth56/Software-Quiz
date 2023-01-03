@@ -50,8 +50,7 @@ const quiz = {
             answer: 0
         }
     ],
-    medium: [
-        {
+    medium: [{
             prompt: "One or more defects occurring in the computer software that prevents the software from working is called",
             choices: ["bot", "system error", "bug", "slug"],
             answer: 2
@@ -128,14 +127,14 @@ const quiz = {
             answer: 3
         }
     ],
-    hard: [
-        {
+    hard: [{
             prompt: "Which of the following is not an OOPS concept in Java?",
             choices: [
                 "Polymorphism",
                 "Inheritance",
                 "Compilation",
-                "Encapsulation"],
+                "Encapsulation"
+            ],
             answer: 2
         },
         {
@@ -144,7 +143,8 @@ const quiz = {
                 "Floating-point value assigned to a Floating type",
                 "Floating-point value assigned to an integer type",
                 "Integer value assigned to floating type",
-                "Integer value assigned to floating type"],
+                "Integer value assigned to floating type"
+            ],
             answer: 1
         },
         {
@@ -153,7 +153,8 @@ const quiz = {
                 "Kotlin",
                 "SmallTalk",
                 "Java",
-                "C++"],
+                "C++"
+            ],
             answer: 1
         },
         {
@@ -162,7 +163,8 @@ const quiz = {
                 "Minimum Duplication and Redundancy of Data",
                 "High Level of Security",
                 "Single-user Access only",
-                "Support ACID Property"],
+                "Support ACID Property"
+            ],
             answer: 2
         },
         {
@@ -171,7 +173,8 @@ const quiz = {
                 "Hyper data",
                 "Tera data",
                 "Meta data",
-                "Relations"],
+                "Relations"
+            ],
             answer: 2
         },
         {
@@ -180,7 +183,8 @@ const quiz = {
                 "Iterative Development",
                 "Incremental Development",
                 "Both Incremental and Iterative Development",
-                "Linear Development"],
+                "Linear Development"
+            ],
             answer: 2
         },
         {
@@ -189,7 +193,8 @@ const quiz = {
                 "Code efficiency",
                 "Code readability",
                 "Flexibility",
-                "Code reusability"],
+                "Code reusability"
+            ],
             answer: 3
         },
         {
@@ -198,104 +203,105 @@ const quiz = {
                 "Destructor is called at end of function",
                 "Destructor is called when called explicitly",
                 "Destructor is not called",
-                "Destructor is called when function is out of scope"],
+                "Destructor is called when function is out of scope"
+            ],
             answer: 2
         },
-       
+
 
     ]
 };
 
 
-const difficultyButtons = document.querySelectorAll(".difficulty-btn");
-difficultyButtons.forEach(button => {
-    button.addEventListener("click", startQuiz);
+let currentIndex = 0;
+let currentDifficulty = "easy";
+let score = 0;
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Display the username and difficulty buttons
+    const username = document.getElementById("username").value;
+    const easyBtn = document.getElementById("easy");
+    const mediumBtn = document.getElementById("medium");
+    const hardBtn = document.getElementById("hard");
+
+    easyBtn.addEventListener("click", () => {
+        startQuiz("easy");
+    });
+    mediumBtn.addEventListener("click", () => {
+        startQuiz("medium");
+    });
+    hardBtn.addEventListener("click", () => {
+        startQuiz("hard");
+    });
+
+
+
+
 });
 
-let score = 0;
-let remaining = 0;
-let currentQuestion = 0;
-let difficulty = "";
-const quizContainer = document.querySelector("#quiz-container");
-
-function startQuiz(event) {
-
-    let difficulty = event.target.value;
-
+function startQuiz(difficulty) {
+    // Update the current difficulty and reset the score and current index
     const username = document.querySelector("#username").value;
     if (username === "") {
         alert("Please enter your username");
         return;
     }
+    currentDifficulty = difficulty;
+    score = 0;
+    currentIndex = 0;
 
+    // Update the user and remaining questions elements
+    document.getElementById("names").innerHTML = username.value;
+    document.getElementById("remaining-value").innerHTML = quiz[currentDifficulty].length;
 
+    // Hide the quiz form and start the quiz
     document.getElementById("quiz-form").style.display = "none";
     document.querySelector("#score").style.display = "block";
     document.querySelector("#remaining").style.display = "block";
     document.querySelector("#user-div").style.display = "block";
     document.getElementById("names").innerHTML = username;
-
-
-    score = 0;
-    remaining = quiz[difficulty].length;
-    currentQuestion = 0;
-    updateScore();
-    updateRemaining();
     showQuestion();
 }
 
 function showQuestion() {
     // Get the current question
-    const question = quiz[difficulty][currentQuestion];
-    // Update the quiz container
-    const quizContainer = document.querySelector("#quiz-container");
-    quizContainer.innerHTML = "";
-    // Add the question prompt
-    const prompt = document.createElement("p");
-    prompt.textContent = question.prompt;
-    quizContainer.appendChild(prompt);
-    // Add the choices
-    const choices = document.createElement("div");
-    choices.id = "choices";
-    quizContainer.appendChild(choices);
-    for (let i = 0; i < question.choices.length; i++) {
-        const choice = document.createElement("button");
-        choice.textContent = question.choices[i];
-        choice.addEventListener("click", function () {
-            // Check if the answer is correct
-            if (question.answer === i) {
-                // Increase the score and update the score element
-                score++;
-                updateScore();
-            }
-            // Go to the next question
-            currentQuestion++;
-            // If there are no more questions, end the quiz
-            if (currentQuestion === quiz[difficulty].length) {
-                endQuiz();
-            } else {
-                // Otherwise, show the next question
-                showQuestion();
-            }
-        });
-        choices.appendChild(choice);
+    const currentQuestion = quiz[currentDifficulty][currentIndex];
+
+    // Display the question and answer choices
+
+    document.getElementById("quiz-questions").innerHTML = currentQuestion.prompt;
+    let answersHTML = "";
+    for (let i = 0; i < currentQuestion.choices.length; i++) {
+        answersHTML += `<button class="answer-btn" value="${i}">${currentQuestion.choices[i]}</button>`;
+    }
+
+    document.getElementById("quiz-answers").innerHTML = answersHTML;
+
+    // Add event listeners for the answer buttons
+    const answerBtns = document.querySelectorAll(".answer-btn");
+    for (const btn of answerBtns) {
+        btn.addEventListener("click", checkAnswer);
     }
 }
 
-function endQuiz() {
-    // Show the final score and a message
-    const quizContainer = document.querySelector("#quiz-container");
-    quizContainer.innerHTML = "";
-    const message = document.createElement("p");
-    message.textContent = `Congratulations, you finished the quiz with a score of ${score}/${quiz[difficulty].length}!`;
-    quizContainer.appendChild(message);
-}
+function checkAnswer(event) {
+    // Get the selected answer
+    const selectedAnswer = Number(event.target.value);
 
-function updateScore() {
-    document.querySelector("#score-value").textContent = score;
-}
+    // Check if the answer is correct
+    if (selectedAnswer === quiz[currentDifficulty][currentIndex].answer) {
+        score++;
+        document.getElementById("score-value").innerHTML = score;
 
-function updateRemaining() {
-    remaining--;
-    document.querySelector("#remaining-value").textContent = remaining;
+    }
+
+    // Go to the next question or end the quiz
+    currentIndex++;
+
+    if (currentIndex < quiz[currentDifficulty].length) {
+        showQuestion();
+
+    } else {
+ // call end game function to show score and username.
+    }
 }
