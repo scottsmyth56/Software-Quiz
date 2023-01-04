@@ -79,17 +79,31 @@ button:hover{
     margin-bottom: 15px;
 }
 
+#easy, #medium,#hard{
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
 #quiz-answers {
     text-align: center;
     display: flex;
     flex-direction: column;
 }
-/* @media (max-width: 600px) {
-    #quiz-answers {
-      flex-direction: row;
-    }
-  } */
 
 #reset-button{
     display: none;
+}
+
+#username-label{
+    color: white;
+    display: block;
+    margin-bottom: 5px;
+}
+#username{
+    background: none;
+    border: 2px solid #3498db;
+    padding: 8px;
+    color: white;
+    font-size: 15px;
 }

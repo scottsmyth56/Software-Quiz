@@ -219,7 +219,7 @@ let score = 0;
 const resetButton = document.getElementById('reset-button');
 resetButton.addEventListener('click', resetQuiz);
 
-remaining = (quiz[currentDifficulty].length)-1;
+remaining = (quiz[currentDifficulty].length) - 1;
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -318,15 +318,15 @@ function endQuiz() {
         <h2>You finished the quiz!</h2>
         <p>${username} score: ${score}/${quiz[currentDifficulty].length}</p>`;
 
-        document.getElementById("reset-button").style.display = "none"
+    document.getElementById("reset-button").style.display = "none"
 }
 
 function resetQuiz() {
-
+    score = 0;
     document.getElementById("quiz-questions").innerHTML = "";
     document.getElementById("quiz-answers").innerHTML = "";
     document.getElementById("score-value").innerHTML = score;
-
+    remaining = quiz[currentDifficulty].length;
     currentIndex = 0;
     showQuestion();
 }
