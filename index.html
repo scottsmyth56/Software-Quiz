@@ -1,33 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Co mpatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A Software Development Quiz">
     <meta name="keywords" content="software, quiz, knowledge, coding">
-
-
-    <link rel="stylesheet" href="assets/css/stylesheet.css">
-
-
+    <link rel="stylesheet" href="assets/css/stylesheet1.css">
     <title>Software Savvy Quiz</title>
 </head>
 
 <body>
 
     <div id="quiz-form">
-
+        
         <div id="title">Software Savvy Quiz</div>
-
         <p class="info">Test your Software knowledge with this savvy quiz! </p>
         <p class="info">When your ready choose your difficulty and the game will start</p>
+       
         <div id="username-form">
             <label for="username">Enter your username:</label>
             <input type="text" id="username" name="username" required>
         </div>
+        
         <div id="difficulty-buttons">
             <button value="easy" id="easy" class="difficulty-btn">Easy</button>
             <button value="medium" id="medium" class="difficulty-btn">Medium</button>
@@ -35,19 +30,20 @@
         </div>
     </div>
 
-   
+
     <div id="score">Score: <span id="score-value">0</span></div>
     <div id="user-div">User: <span id="names"></span></div>
     <div id="remaining">Questions remaining: <span id="remaining-value">0</span></div>
+
+
+
     <div id="quiz-container">
         <div id="quiz-questions"></div>
         <div id="quiz-answers"></div>
-
     </div>
+
+    <button id="reset-button">Reset Quiz</button>
 
     <script src="javascript.js"></script>
 </body>
-
-
-</div>
 </html>

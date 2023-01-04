@@ -78,3 +78,7 @@ button {
 #quiz-answers {
     text-align: center;
 }
+#leaderboard{
+    display: none;
+    color: white;
+}

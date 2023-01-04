@@ -216,6 +216,8 @@ const quiz = {
 let currentIndex = 0;
 let currentDifficulty = "easy";
 let score = 0;
+const resetButton = document.getElementById('reset-button');
+resetButton.addEventListener('click', resetQuiz);
 
 document.addEventListener("DOMContentLoaded", () => {
     // Display the username and difficulty buttons
@@ -262,6 +264,10 @@ function startQuiz(difficulty) {
 
 function showQuestion() {
     // Get the current question
+    let remaining = quiz[currentDifficulty].length;
+    document.getElementById("remaining-value").innerHTML = remaining;
+   
+   
     const currentQuestion = quiz[currentDifficulty][currentIndex];
 
     // Display the question and answer choices
@@ -296,7 +302,9 @@ function checkAnswer(event) {
     currentIndex++;
 
     if (currentIndex < quiz[currentDifficulty].length) {
+        remaining--;
         showQuestion();
+        alert(remaining);
 
     } else {
         endQuiz();
@@ -307,6 +315,16 @@ function endQuiz() {
     // Show the final score and a message based on the score
     document.getElementById("quiz-container").innerHTML = `
         <h2>You finished the quiz!</h2>
-        <p>Your score: ${score}/${quiz[currentDifficulty].length}</p>`;
-     
+        <p>${username} score: ${score}/${quiz[currentDifficulty].length}</p>`;
+
+}
+
+function resetQuiz() {
+   
+    document.getElementById("quiz-questions").innerHTML = "";
+    document.getElementById("quiz-answers").innerHTML = "";
+    document.getElementById("score-value").innerHTML = score;
+    
+    currentIndex = 0;
+    showQuestion();
 }
