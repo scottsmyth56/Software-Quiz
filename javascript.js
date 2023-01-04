@@ -217,8 +217,10 @@ let currentIndex = 0;
 let currentDifficulty = "easy";
 let score = 0;
 const resetButton = document.getElementById('reset-button');
-remaining = (quiz[currentDifficulty].length)-1;
 resetButton.addEventListener('click', resetQuiz);
+
+remaining = (quiz[currentDifficulty].length)-1;
+
 
 document.addEventListener("DOMContentLoaded", () => {
     // Display the username and difficulty buttons
@@ -259,14 +261,13 @@ function startQuiz(difficulty) {
     document.querySelector("#score").style.display = "block";
     document.querySelector("#remaining").style.display = "block";
     document.querySelector("#user-div").style.display = "block";
+    document.querySelector("#reset-button").style.display = "block";
     document.getElementById("names").innerHTML = username;
     showQuestion();
 }
 
 function showQuestion() {
     // Get the current question
-
-    
     document.getElementById("remaining-value").innerHTML = remaining;
 
     const currentQuestion = quiz[currentDifficulty][currentIndex];
