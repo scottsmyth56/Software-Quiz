@@ -217,6 +217,7 @@ let currentIndex = 0;
 let currentDifficulty = "easy";
 let score = 0;
 const resetButton = document.getElementById('reset-button');
+remaining = (quiz[currentDifficulty].length)-1;
 resetButton.addEventListener('click', resetQuiz);
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -264,10 +265,10 @@ function startQuiz(difficulty) {
 
 function showQuestion() {
     // Get the current question
-    let remaining = quiz[currentDifficulty].length;
+
+    
     document.getElementById("remaining-value").innerHTML = remaining;
-   
-   
+
     const currentQuestion = quiz[currentDifficulty][currentIndex];
 
     // Display the question and answer choices
@@ -304,7 +305,6 @@ function checkAnswer(event) {
     if (currentIndex < quiz[currentDifficulty].length) {
         remaining--;
         showQuestion();
-        alert(remaining);
 
     } else {
         endQuiz();
@@ -317,14 +317,15 @@ function endQuiz() {
         <h2>You finished the quiz!</h2>
         <p>${username} score: ${score}/${quiz[currentDifficulty].length}</p>`;
 
+        document.getElementById("reset-button").style.display = "none"
 }
 
 function resetQuiz() {
-   
+
     document.getElementById("quiz-questions").innerHTML = "";
     document.getElementById("quiz-answers").innerHTML = "";
     document.getElementById("score-value").innerHTML = score;
-    
+
     currentIndex = 0;
     showQuestion();
 }
