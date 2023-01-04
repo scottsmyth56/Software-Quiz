@@ -21,12 +21,12 @@ const quiz = {
         },
         {
             prompt: "Where in an HTML document is the correct place to refer to an external style sheet?",
-            choices: ["In the <body> section", "In the <head> section", "At the end of the document", "In a <header> section"],
+            choices: ["In the body section", "In the head section", "At the end of the document", "In a header section"],
             answer: 2
         },
         {
             prompt: "Which HTML tag is used to define an internal style sheet?",
-            choices: ["<style>", "<css>", "<link>", "<script>"],
+            choices: ["style", "css", "link", "script"],
             answer: 0
         },
         {
@@ -234,9 +234,6 @@ document.addEventListener("DOMContentLoaded", () => {
         startQuiz("hard");
     });
 
-
-
-
 });
 
 function startQuiz(difficulty) {
@@ -298,7 +295,7 @@ function checkAnswer(event) {
     // Go to the next question or end the quiz
     currentIndex++;
 
-    if (currentIndex < quiz[currentDifficulty].length) {
+    if (currentIndex <= quiz[currentDifficulty].length) {
         showQuestion();
 
     } else {
