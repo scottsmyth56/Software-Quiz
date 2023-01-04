@@ -1,8 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Anybody&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Anybody&display=swap'); 
+html {
+    background: url("/background.jpg") no-repeat center center;
+    background-size: cover;
+    min-height: 100%;
+}
 
-body{
+body {
     font-family: 'Anybody', cursive;
+
+
 }
 
 #difficulty-buttons {
@@ -30,25 +37,44 @@ button {
     font-size: 32px;
     color: #3498db;
 }
-#username-form{
+
+#username-form {
     text-align: center;
     margin-top: 20px;
 }
-#easy{
+
+#easy {
     background-color: green;
 
 }
-#medium{
+
+#medium {
     background-color: orange;
 
 }
-#hard{
+
+#hard {
     background-color: red;
 }
-.info{
+
+.info {
     text-align: center;
 }
 
-#score , #remaining ,#user-div{
+#score,
+#remaining,
+#user-div {
     display: none;
+}
+
+#quiz-container {
+    width: 100%;
+}
+
+#quiz-questions {
+    text-align: center;
+}
+
+#quiz-answers {
+    text-align: center;
 }
