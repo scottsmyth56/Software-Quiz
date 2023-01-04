@@ -8,6 +8,7 @@
     <meta name="description" content="A Software Development Quiz">
     <meta name="keywords" content="software, quiz, knowledge, coding">
     <link rel="stylesheet" href="assets/css/stylesheet1.css">
+    <script src="https://kit.fontawesome.com/394cced9ae.js" crossorigin="anonymous"></script>
     <title>Software Savvy Quiz</title>
 </head>
 
@@ -32,18 +33,21 @@
     </div>
 
 
-    <div id="score">Score: <span id="score-value">0</span></div>
-    <div id="user-div">User: <span id="names"></span></div>
-    <div id="remaining">Questions remaining: <span id="remaining-value">0</span></div>
-
-
-    <div id="quiz-questions"></div>
-    <div id="quiz-container">
-        <div id="quiz-answers">
-        </div>
-    </div>
+    <div id="score"> <i class="fa-solid fa-star"></i> Score: <span id="score-value">0</span></div>
+    <div id="user-div"><i class="fa-solid fa-user"></i> User: <span id="names"></span></div>
+    <div id="remaining"><i class="fa-solid fa-circle-question"></i> Questions remaining: <span
+            id="remaining-value">0</span></div>
 
     <button id="reset-button">Reset Quiz</button>
+
+    <div id="question-outer">
+        <div id="quiz-questions"></div>
+    </div>
+    <div id="quiz-container">
+        <div id="quiz-answers"></div>
+    </div>
+
+
 
     <script src="javascript.js"></script>
 </body>

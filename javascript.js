@@ -258,9 +258,9 @@ function startQuiz(difficulty) {
 
     // Hide the quiz form and start the quiz
     document.getElementById("quiz-form").style.display = "none";
-    document.querySelector("#score").style.display = "block";
-    document.querySelector("#remaining").style.display = "block";
-    document.querySelector("#user-div").style.display = "block";
+    document.querySelector("#score").style.display = "inline-block";
+    document.querySelector("#remaining").style.display = "inline-block";
+    document.querySelector("#user-div").style.display = "inline-block";
     document.querySelector("#reset-button").style.display = "block";
     document.getElementById("names").innerHTML = username;
     showQuestion();
