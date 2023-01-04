@@ -295,10 +295,18 @@ function checkAnswer(event) {
     // Go to the next question or end the quiz
     currentIndex++;
 
-    if (currentIndex <= quiz[currentDifficulty].length) {
+    if (currentIndex < quiz[currentDifficulty].length) {
         showQuestion();
 
     } else {
- // call end game function to show score and username.
+        endQuiz();
     }
+}
+
+function endQuiz() {
+    // Show the final score and a message based on the score
+    document.getElementById("quiz-container").innerHTML = `
+        <h2>You finished the quiz!</h2>
+        <p>Your score: ${score}/${quiz[currentDifficulty].length}</p>`;
+     
 }
