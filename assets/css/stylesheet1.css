@@ -8,7 +8,7 @@ html {
 
 body {
     font-family: 'Anybody', cursive;
-   
+    overflow: hidden;
 }
 #content{
     display: grid;
@@ -73,12 +73,16 @@ button:hover {
     font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    margin:5px;
 }
 
 #quiz-container {
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    flex-direction: column;
 }
 
 #quiz-questions {
@@ -88,6 +92,7 @@ button:hover {
     text-transform: uppercase;
     margin-bottom: 15px;
     display: block;
+    height: 100%;
 }
 
 #easy,
@@ -96,7 +101,6 @@ button:hover {
     font-size: 15px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-left: 3px;
 }
 
 #quiz-answers {
@@ -141,6 +145,7 @@ button:hover {
     display: flex;
     width: 100%;
     justify-content: center;
+    align-items: center;
 }
 
 #quiz-results{
@@ -149,3 +154,13 @@ button:hover {
     justify-content: center;
 }
 
+#menu{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+#game-info{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}

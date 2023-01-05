@@ -264,9 +264,9 @@ function startQuiz(difficulty) {
 
     // Hide the quiz form and start the quiz
     document.getElementById("quiz-form").style.display = "none";
-    document.querySelector("#score").style.display = "inline-block";
-    document.querySelector("#remaining").style.display = "inline-block";
-    document.querySelector("#user-div").style.display = "inline-block";
+    document.querySelector("#score").style.display = "block";
+    document.querySelector("#remaining").style.display = "block";
+    document.querySelector("#user-div").style.display = "block";
     resetButton.style.display = "block";
     startMenuButton.style.display ="block";
     document.getElementById("names").innerHTML = username;
@@ -323,24 +323,19 @@ function checkAnswer(event) {
 
 function endQuiz() {
     // Show the final score and a message based on the score
-
     quizResults.style.display = "flex";
     document.getElementById("results-username").innerHTML = username.value;
     document.getElementById("results-score").innerHTML = `Score: ${score}/${quiz[currentDifficulty].length}`
     document.getElementById("reset-button").style.display = "none";
-    document.getElementById("question-outer").style.display = "none";
+    document.getElementById("quiz-container").style.display = "none";
     quizQuestions.innerHTML = "";
     quizAnswers.innerHTML = "";
-    // document.getElementById("quiz-questions").innerHTML = "";
-    // document.getElementById("quiz-answers").innerHTML = "";
 }
 
 function resetQuiz() {
     score = 0;
     quizQuestions.innerHTML = "";
     quizAnswers.innerHTML = "";
-    // document.getElementById("quiz-questions").innerHTML = "";
-    // document.getElementById("quiz-answers").innerHTML = "";
     document.getElementById("score-value").innerHTML = score;
     remaining = quiz[currentDifficulty].length;
     currentIndex = 0;

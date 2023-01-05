@@ -13,50 +13,50 @@
 </head>
 
 <body>
-<div id ="content">
-    <div id="quiz-form">
+    <div id="content">
+        <div id="quiz-form">
 
-        <div id="title">Software Savvy Quiz</div>
-        <p class="info">Test your Software knowledge with this savvy quiz! </p>
-        <p class="info">When your ready choose your difficulty and the game will start</p>
+            <div id="title">Software Savvy Quiz</div>
+            <p class="info">Test your Software knowledge with this savvy quiz! </p>
+            <p class="info">When your ready choose your difficulty and the game will start</p>
 
-        <div id="username-form">
-            <label id="username-label" for="username">Enter your username</label>
-            <input type="text" id="username" name="username" required>
+            <div id="username-form">
+                <label id="username-label" for="username">Enter your username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <div id="difficulty-buttons">
+                <button value="easy" id="easy" class="difficulty-btn">Easy</button>
+                <button value="medium" id="medium" class="difficulty-btn">Medium</button>
+                <button value="hard" id="hard" class="difficulty-btn">Hard</button>
+            </div>
+        </div>
+    </div>
+    <div id="game-info">
+        <div id="score"> <i class="fa-solid fa-star"></i> Score: <span id="score-value">0</span></div>
+        <div id="remaining"><i class="fa-solid fa-circle-question"></i> Questions remaining: <span id="remaining-value">0</span></div>
+        <div id="user-div"><i class="fa-solid fa-user"></i> User: <span id="names"></span></div>
+    </div>
+    <div id="menu">
+        <button id="reset-button">Reset Quiz</button>
+        <button id="menu-button">Start Menu</button>
+    </div>
+    <div id="quiz">
+
+        <div id="quiz-container">
+            <div id="quiz-questions"></div>
+            <div id="quiz-answers"></div>
         </div>
 
-        <div id="difficulty-buttons">
-            <button value="easy" id="easy" class="difficulty-btn">Easy</button>
-            <button value="medium" id="medium" class="difficulty-btn">Medium</button>
-            <button value="hard" id="hard" class="difficulty-btn">Hard</button>
+        <div id="quiz-results">
+            <h3 id="results-username"></h3>
+            <h3 id="results-score"></h3>
         </div>
     </div>
-</div>
-
-    <div id="score"> <i class="fa-solid fa-star"></i> Score: <span id="score-value">0</span></div>
-    <div id="user-div"><i class="fa-solid fa-user"></i> User: <span id="names"></span></div>
-    <div id="remaining"><i class="fa-solid fa-circle-question"></i> Questions remaining: <span
-            id="remaining-value">0</span></div>
-
-    <button id="reset-button">Reset Quiz</button>
-    <button id="menu-button">Start Menu</button>
-    <div id="question-outer">
-        <div id="quiz-questions"></div>
-    </div>
-    <div id="quiz-container">
-        <div id="quiz-answers"></div>
-    </div>
-
-    <div id="quiz-results">
-
-        <h3 id="results-username"></h3>
-        <h3 id="results-score"></h3>
-    </div>
- 
 
 
     <script src="javascript.js"></script>
-</div>
+    </div>
 </body>
 
 </html>
