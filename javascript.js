@@ -223,7 +223,7 @@ quizQuestions = document.getElementById("quiz-questions");
 quizAnswers = document.getElementById("quiz-answers");
 
 resetButton.addEventListener('click', resetQuiz);
-startMenuButton.addEventListener('click', function(){
+startMenuButton.addEventListener('click', function () {
     window.location.reload();
 });
 remaining = (quiz[currentDifficulty].length) - 1;
@@ -268,10 +268,11 @@ function startQuiz(difficulty) {
     document.querySelector("#remaining").style.display = "block";
     document.querySelector("#user-div").style.display = "block";
     resetButton.style.display = "block";
-    startMenuButton.style.display ="block";
+    startMenuButton.style.display = "block";
     document.getElementById("names").innerHTML = username;
     document.getElementById("content").style.display = "none";
     showQuestion();
+    startTimer();
 }
 
 function showQuestion() {
@@ -320,16 +321,22 @@ function checkAnswer(event) {
     }
 }
 
+let timer = 0;
+let interval;
 
 function endQuiz() {
-    // Show the final score and a message based on the score
+    // Show the final score and a message based on the score 
+    
     quizResults.style.display = "flex";
     document.getElementById("results-username").innerHTML = username.value;
     document.getElementById("results-score").innerHTML = `Score: ${score}/${quiz[currentDifficulty].length}`
     document.getElementById("reset-button").style.display = "none";
     document.getElementById("quiz-container").style.display = "none";
     quizQuestions.innerHTML = "";
-    quizAnswers.innerHTML = "";
+    quizAnswers.innerHTML = "";  
+    stopTimer();
+    document.getElementById("results-time").innerHTML = "Total time: " + timer + " seconds";
+   
 }
 
 function resetQuiz() {
@@ -341,3 +348,14 @@ function resetQuiz() {
     currentIndex = 0;
     showQuestion();
 }
+
+function startTimer() {
+    interval = setInterval(function () {
+      timer++;
+      document.getElementById("timer").innerHTML = timer;
+    }, 1000);
+  }
+  
+  function stopTimer() {
+    clearInterval(interval);
+  }
