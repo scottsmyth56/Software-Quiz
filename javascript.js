@@ -266,6 +266,7 @@ function startQuiz(difficulty) {
     document.getElementById("quiz-form").style.display = "none";
     document.querySelector("#score").style.display = "block";
     document.querySelector("#remaining").style.display = "block";
+    document.querySelector("#time").style.display = "block";
     document.querySelector("#user-div").style.display = "block";
     resetButton.style.display = "block";
     startMenuButton.style.display = "block";

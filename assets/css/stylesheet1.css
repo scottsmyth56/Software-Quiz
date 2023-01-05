@@ -66,6 +66,7 @@ button:hover {
 }
 
 #score,
+#time,
 #remaining,
 #user-div {
     display: none;
