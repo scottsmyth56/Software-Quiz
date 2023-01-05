@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Anybody&display=swap');
 
 html {
-    background: linear-gradient(to bottom, rgba(46, 47, 50, 0.409), rgba(61, 57, 60, 0.477)), url("/background.jpg") no-repeat center center;
+     /* linear-gradient(to bottom, rgba(46, 47, 50, 0.409), rgba(61, 57, 60, 0.477)), url("/background.jpg") no-repeat center center; */
+   background: linear-gradient(to bottom, rgb(9 9 9 / 34%), rgb(61 57 60 / 57%)), url(/background.jpg) no-repeat center center;
     background-size: cover;
     min-height: 100%;
 }

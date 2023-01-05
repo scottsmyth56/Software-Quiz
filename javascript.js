@@ -332,6 +332,11 @@ function endQuiz() {
     quizResults.style.display = "flex";
     document.getElementById("results-username").innerHTML = username.value;
     document.getElementById("results-score").innerHTML = `Score: ${score}/${quiz[currentDifficulty].length}`
+
+if(score > (quiz[currentDifficulty].length) /2  ){
+alert("hhhh")
+}
+
     document.getElementById("reset-button").style.display = "none";
     document.getElementById("quiz-container").style.display = "none";
     quizQuestions.innerHTML = "";
