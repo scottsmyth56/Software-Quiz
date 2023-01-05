@@ -266,8 +266,9 @@ function startQuiz(difficulty) {
     document.getElementById("quiz-form").style.display = "none";
     document.querySelector("#score").style.display = "block";
     document.querySelector("#remaining").style.display = "block";
-    document.querySelector("#time").style.display = "block";
     document.querySelector("#user-div").style.display = "block";
+    document.querySelector("#time").style.display = "block";
+    document.querySelector("#quiz").style.display = "block";
     resetButton.style.display = "block";
     startMenuButton.style.display = "block";
     document.getElementById("names").innerHTML = username;
@@ -351,12 +352,12 @@ function resetQuiz() {
 }
 
 function startTimer() {
-    interval = setInterval(function () {
-      timer++;
-      document.getElementById("timer").innerHTML = timer;
-    }, 1000);
-  }
-  
-  function stopTimer() {
-    clearInterval(interval);
-  }
+  interval = setInterval(function () {
+    timer++;
+    document.getElementById("timer").innerHTML = timer;
+  }, 1000);
+}
+
+function stopTimer() {
+  clearInterval(interval);
+}
