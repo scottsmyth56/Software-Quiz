@@ -8,8 +8,12 @@ html {
 
 body {
     font-family: 'Anybody', cursive;
-
-
+   
+}
+#content{
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
 }
 
 #difficulty-buttons {
@@ -144,3 +148,4 @@ button:hover {
     width: 100%;
     justify-content: center;
 }
+

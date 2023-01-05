@@ -270,6 +270,7 @@ function startQuiz(difficulty) {
     resetButton.style.display = "block";
     startMenuButton.style.display ="block";
     document.getElementById("names").innerHTML = username;
+    document.getElementById("content").style.display = "none";
     showQuestion();
 }
 
