@@ -212,13 +212,20 @@ const quiz = {
     ]
 };
 
-
 let currentIndex = 0;
 let currentDifficulty = "easy";
 let score = 0;
-const resetButton = document.getElementById('reset-button');
-resetButton.addEventListener('click', resetQuiz);
 
+const resetButton = document.getElementById('reset-button');
+const startMenuButton = document.getElementById('menu-button');
+quizResults = document.getElementById("quiz-results");
+quizQuestions = document.getElementById("quiz-questions");
+quizAnswers = document.getElementById("quiz-answers");
+
+resetButton.addEventListener('click', resetQuiz);
+startMenuButton.addEventListener('click', function(){
+    window.location.reload();
+});
 remaining = (quiz[currentDifficulty].length) - 1;
 
 
@@ -253,7 +260,6 @@ function startQuiz(difficulty) {
     currentIndex = 0;
 
     // Update the user and remaining questions elements
-    document.getElementById("names").innerHTML = username.value;
     document.getElementById("remaining-value").innerHTML = quiz[currentDifficulty].length;
 
     // Hide the quiz form and start the quiz
@@ -261,7 +267,8 @@ function startQuiz(difficulty) {
     document.querySelector("#score").style.display = "inline-block";
     document.querySelector("#remaining").style.display = "inline-block";
     document.querySelector("#user-div").style.display = "inline-block";
-    document.querySelector("#reset-button").style.display = "block";
+    resetButton.style.display = "block";
+    startMenuButton.style.display ="block";
     document.getElementById("names").innerHTML = username;
     showQuestion();
 }
@@ -312,19 +319,27 @@ function checkAnswer(event) {
     }
 }
 
+
 function endQuiz() {
     // Show the final score and a message based on the score
-    document.getElementById("quiz-container").innerHTML = `
-        <h2>You finished the quiz!</h2>
-        <p>${username} score: ${score}/${quiz[currentDifficulty].length}</p>`;
 
-    document.getElementById("reset-button").style.display = "none"
+    quizResults.style.display = "flex";
+    document.getElementById("results-username").innerHTML = username.value;
+    document.getElementById("results-score").innerHTML = `Score: ${score}/${quiz[currentDifficulty].length}`
+    document.getElementById("reset-button").style.display = "none";
+    document.getElementById("question-outer").style.display = "none";
+    quizQuestions.innerHTML = "";
+    quizAnswers.innerHTML = "";
+    // document.getElementById("quiz-questions").innerHTML = "";
+    // document.getElementById("quiz-answers").innerHTML = "";
 }
 
 function resetQuiz() {
     score = 0;
-    document.getElementById("quiz-questions").innerHTML = "";
-    document.getElementById("quiz-answers").innerHTML = "";
+    quizQuestions.innerHTML = "";
+    quizAnswers.innerHTML = "";
+    // document.getElementById("quiz-questions").innerHTML = "";
+    // document.getElementById("quiz-answers").innerHTML = "";
     document.getElementById("score-value").innerHTML = score;
     remaining = quiz[currentDifficulty].length;
     currentIndex = 0;
