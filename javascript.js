@@ -334,7 +334,7 @@ function endQuiz() {
     document.getElementById("results-score").innerHTML = `Score: ${score}/${quiz[currentDifficulty].length}`
 
 if(score > (quiz[currentDifficulty].length) /2  ){
-alert("hhhh")
+
 }
 
     document.getElementById("reset-button").style.display = "none";

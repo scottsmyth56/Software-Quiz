@@ -157,12 +157,16 @@ button:hover {
 
 #game-info {
     display: flex;
-    flex-direction: column;
-    width: 50%;
+    flex-direction: row;
 }
 
 #quiz {
     display: none;
+}
+
+#outer-game-info{
+    display: flex;
+    justify-content: center;
 }
 
 
