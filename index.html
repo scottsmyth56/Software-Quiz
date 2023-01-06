@@ -7,24 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A Software Development Quiz">
     <meta name="keywords" content="software, quiz, knowledge, coding">
-    <link rel="stylesheet" href="assets/css/stylesheet1.css">
+    <link rel="stylesheet" href="assets/css/stylesheet.css">
     <script src="https://kit.fontawesome.com/394cced9ae.js" crossorigin="anonymous"></script>
     <title>Software Savvy Quiz</title>
 </head>
 
 <body>
     <div id="content">
-        <div id="quiz-form">
-
-            <div id="title">Software Savvy Quiz</div>
+        
+        <div id="quiz-form">        
+            
+            <h1 id="title">Software Savvy Quiz</h1>
             <p class="info">Test your Software knowledge with this savvy quiz! </p>
             <p class="info">When your ready choose your difficulty and the game will start</p>
-
+            
             <div id="username-form">
                 <label id="username-label" for="username">Enter your username</label>
                 <input type="text" id="username" name="username" required>
             </div>
-
+            
             <div id="difficulty-buttons">
                 <button value="easy" id="easy" class="difficulty-btn">Easy</button>
                 <button value="medium" id="medium" class="difficulty-btn">Medium</button>
@@ -32,24 +33,22 @@
             </div>
         </div>
     </div>
+   
     <div id="outer-game-info">
         <div id="game-info">
             <div id="score"> <i class="fa-solid fa-star"></i> Score: <span id="score-value">0</span></div>
-            <div id="remaining"><i class="fa-solid fa-circle-question"></i> Questions remaining: <span
-                    id="remaining-value">0</span></div>
+            <div id="remaining"><i class="fa-solid fa-circle-question"></i> Questions remaining: <span id="remaining-value">0</span></div>
             <div id="time"><i class="fa-solid fa-clock"></i> Time: <span id="timer">0</span></div>
             <div id="user-div"><i class="fa-solid fa-user"></i> User: <span id="names"></span></div>
         </div>
     </div>
     <div id="quiz">
-
         <div id="quiz-container">
             <div id="quiz-questions"></div>
             <div id="quiz-answers"></div>
             <div id="menu">
                 <button id="menu-button"><i class="fa-solid fa-house"></i></button>
                 <button id="reset-button">Reset </button>
-
             </div>
         </div>
 
@@ -57,11 +56,8 @@
             <h3 id="results-username"></h3>
             <h3 id="results-score"></h3>
             <h3 id="results-time"></h3>
-
         </div>
     </div>
-
-
     <script src="javascript.js"></script>
     </div>
 </body>
