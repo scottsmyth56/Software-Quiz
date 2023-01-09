@@ -106,7 +106,8 @@ button:hover {
     margin-bottom: 15px;
     display: block;
     height: 100%;
-    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;    
 }
 
 #easy,
@@ -221,6 +222,12 @@ button:hover {
 
     .info {
         font-size: 12px;
+        padding: 5px;
+    }
+    #quiz-questions{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        font-size: 17px;    
     }
 
 
@@ -229,6 +236,7 @@ button:hover {
 @media screen and (max-width: 900px) {
     #game-info {
         flex-direction: column;
+        
     }
 
     .answer-btn {
@@ -239,16 +247,26 @@ button:hover {
     #quiz-container {
         min-height: 80vh;
     }
+    #quiz-questions{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
 
 }
 
-@media screen and (min-width: 1000px) {}
+@media screen and (min-width: 1000px) {
+    #quiz-questions{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        padding: 20px;
+    }
+}
 
 @media screen and (min-width: 1600px) {
     .answer-btn {
         text-transform: capitalize;
-        width: 500px;
-        font-size: 30px;
+        width: 700px;
+        font-size: 20px;
 
     }
     #quiz-questions{
@@ -267,6 +285,9 @@ button:hover {
         font-size: 20px;
 
 
+    }
+    #username-label{
+        font-size: 20px;
     }
 
 
