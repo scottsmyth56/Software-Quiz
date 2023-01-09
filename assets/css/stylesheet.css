@@ -54,6 +54,16 @@ button:hover {
     font-weight: bolder;
 
 }
+#title-results {
+    text-align: center;
+    font-size: 35px;
+    color: #3498db;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    display: none;
+
+}
 
 #username-form {
     text-align: center;
@@ -96,6 +106,7 @@ button:hover {
     margin-bottom: 15px;
     display: block;
     height: 100%;
+    margin: auto;
 }
 
 #easy,
@@ -147,7 +158,12 @@ button:hover {
 #quiz-results {
     display: none;
     width: 100%;
+    color: white;
+    font-size: 30px;
+    text-transform: uppercase;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 #menu {
@@ -178,8 +194,14 @@ button:hover {
 
 }
 
+#results-message {
+    display: none;
+
+}
+
 
 @media screen and (max-width: 400px) {
+
     #score,
     #time,
     #remaining,
@@ -193,7 +215,8 @@ button:hover {
     #title {
         font-size: 25px;
     }
-    .info{
+
+    .info {
         font-size: 12px;
     }
 
@@ -223,7 +246,7 @@ button:hover {
         text-transform: capitalize;
         width: 500px;
         font-size: 30px;
-    
+
     }
 
 

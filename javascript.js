@@ -221,11 +221,8 @@ const startMenuButton = document.getElementById('menu-button');
 quizResults = document.getElementById("quiz-results");
 quizQuestions = document.getElementById("quiz-questions");
 quizAnswers = document.getElementById("quiz-answers");
-
 resetButton.addEventListener('click', resetQuiz);
-startMenuButton.addEventListener('click', function () {
-    window.location.reload();
-});
+
 remaining = (quiz[currentDifficulty].length) - 1;
 
 
@@ -325,25 +322,29 @@ function checkAnswer(event) {
 
 let timer = 0;
 let interval;
+let resultsMessage = document.getElementById("results-message")
+
 
 function endQuiz() {
     // Show the final score and a message based on the score 
-    
+    document.getElementById("title-results").style.display = "block";
+    resultsMessage.style.display = "block";
     quizResults.style.display = "flex";
     document.getElementById("results-username").innerHTML = username.value;
     document.getElementById("results-score").innerHTML = `Score: ${score}/${quiz[currentDifficulty].length}`
 
-if(score > (quiz[currentDifficulty].length) /2  ){
-
-}
-
+    if (score > (quiz[currentDifficulty].length) / 2) {
+        resultsMessage.innerHTML = "Hard Luck! Please Try Again";
+    } else {
+        resultsMessage.innerHTML = "Well Done! You Passed";
+    }
     document.getElementById("reset-button").style.display = "none";
     document.getElementById("quiz-container").style.display = "none";
     quizQuestions.innerHTML = "";
-    quizAnswers.innerHTML = "";  
+    quizAnswers.innerHTML = "";
     stopTimer();
     document.getElementById("results-time").innerHTML = "Total time: " + timer + " seconds";
-   
+
 }
 
 function resetQuiz() {
@@ -357,12 +358,12 @@ function resetQuiz() {
 }
 
 function startTimer() {
-  interval = setInterval(function () {
-    timer++;
-    document.getElementById("timer").innerHTML = timer;
-  }, 1000);
+    interval = setInterval(function () {
+        timer++;
+        document.getElementById("timer").innerHTML = timer;
+    }, 1000);
 }
 
 function stopTimer() {
-  clearInterval(interval);
+    clearInterval(interval);
 }
