@@ -218,12 +218,11 @@ let score = 0;
 
 const resetButton = document.getElementById('reset-button');
 const startMenuButton = document.getElementById('menu-button');
-// const resultsMenuButton = document.getElementById('ResultsMenu-button');
 quizResults = document.getElementById("quiz-results");
 quizQuestions = document.getElementById("quiz-questions");
 quizAnswers = document.getElementById("quiz-answers");
 resetButton.addEventListener('click', resetQuiz);
-startMenuButton.addEventListener('click', function () {
+startMenuButton.addEventListener('click', function() {
     window.location.reload();
 });
 
@@ -332,7 +331,7 @@ let resultsMessage = document.getElementById("results-message")
 function endQuiz() {
 
     const resultsMenuButton = document.getElementById('ResultsMenu-button');
-    resultsMenuButton.addEventListener('click', function () {
+    resultsMenuButton.addEventListener('click', function() {
 
         window.location.reload();
 
@@ -359,7 +358,7 @@ function endQuiz() {
     document.getElementById("results-time").innerHTML = "Total time: " + timer + " seconds";
 
 }
-
+//Reset the quiz game
 function resetQuiz() {
     score = 0;
     quizQuestions.innerHTML = "";
@@ -369,14 +368,14 @@ function resetQuiz() {
     currentIndex = 0;
     showQuestion();
 }
-
+// function to start game timer
 function startTimer() {
-    interval = setInterval(function () {
+    interval = setInterval(function() {
         timer++;
         document.getElementById("timer").innerHTML = timer;
     }, 1000);
 }
-
+//function to stop game timer
 function stopTimer() {
     clearInterval(interval);
 }

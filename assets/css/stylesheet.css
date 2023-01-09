@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Anybody&display=swap');
 
 html {
-    /* linear-gradient(to bottom, rgba(46, 47, 50, 0.409), rgba(61, 57, 60, 0.477)), url("/background.jpg") no-repeat center center; */
     background: linear-gradient(to bottom, rgb(9 9 9 / 75%), rgb(0 0 0 / 38%)), url("../images/background.jpg") no-repeat center center;
     background-size: cover;
     min-height: 100%;
@@ -25,7 +24,6 @@ body {
     padding: 10px;
     margin-top: 20px;
 }
-
 
 button {
     padding: 10px 20px;
@@ -52,8 +50,8 @@ button:hover {
     letter-spacing: 4px;
     text-transform: uppercase;
     font-weight: bolder;
-
 }
+
 #title-results {
     text-align: center;
     font-size: 35px;
@@ -62,7 +60,6 @@ button:hover {
     text-transform: uppercase;
     font-weight: bolder;
     display: none;
-
 }
 
 #username-form {
@@ -107,7 +104,7 @@ button:hover {
     display: block;
     height: 100%;
     margin-top: 50px;
-    margin-bottom: 50px;    
+    margin-bottom: 50px;
 }
 
 #easy,
@@ -123,8 +120,6 @@ button:hover {
     display: flex;
     flex-direction: column;
 }
-
-
 
 #username-label {
     color: white;
@@ -150,7 +145,6 @@ button:hover {
     text-transform: uppercase;
     letter-spacing: 3px;
 }
-
 
 #question-outer {
     display: flex;
@@ -195,14 +189,22 @@ button:hover {
     text-transform: capitalize;
     width: 500px;
     font-size: 20px;
-
 }
 
 #results-message {
     display: none;
+}
+
+@media screen and (max-width: 350px) {
+
+#answer-btn{
+    width: 200px;
+    font-size: 13px;
 
 }
 
+
+}
 
 @media screen and (max-width: 400px) {
 
@@ -212,7 +214,6 @@ button:hover {
     #user-div {
         font-size: 15px;
     }
-
 }
 
 @media screen and (max-width: 460px) {
@@ -224,19 +225,25 @@ button:hover {
         font-size: 12px;
         padding: 5px;
     }
-    #quiz-questions{
+
+    #quiz-questions {
         margin-top: 50px;
         margin-bottom: 50px;
-        font-size: 17px;    
+        font-size: 17px;
+        padding: 15px;
+    }
+    #quiz-results{
+        font-size: 20px;
     }
 
-
+    button:hover {
+        border: 2px solid #3498db;
+    }
 }
 
 @media screen and (max-width: 900px) {
     #game-info {
         flex-direction: column;
-        
     }
 
     .answer-btn {
@@ -247,15 +254,15 @@ button:hover {
     #quiz-container {
         min-height: 80vh;
     }
-    #quiz-questions{
+
+    #quiz-questions {
         margin-top: 50px;
         margin-bottom: 50px;
     }
-
 }
 
 @media screen and (min-width: 1000px) {
-    #quiz-questions{
+    #quiz-questions {
         margin-top: 50px;
         margin-bottom: 50px;
         padding: 20px;
@@ -267,28 +274,29 @@ button:hover {
         text-transform: capitalize;
         width: 700px;
         font-size: 20px;
-
     }
-    #quiz-questions{
+
+    #quiz-questions {
         margin-top: 50px;
         margin-bottom: 50px;
         font-size: 30px;
     }
-    #title{
+
+    #title {
         font-size: 45px;
     }
-    .info{
+
+    .info {
         font-size: 25px;
     }
 
-    #easy,#medium,#hard{
-        font-size: 20px;
-
-
-    }
-    #username-label{
+    #easy,
+    #medium,
+    #hard {
         font-size: 20px;
     }
 
-
+    #username-label {
+        font-size: 20px;
+    }
 }
