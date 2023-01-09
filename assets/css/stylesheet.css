@@ -129,6 +129,7 @@ button:hover {
     color: white;
     display: block;
     margin-bottom: 5px;
+    text-transform: capitalize;
 }
 
 #username {
@@ -250,7 +251,23 @@ button:hover {
         font-size: 30px;
 
     }
+    #quiz-questions{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        font-size: 30px;
+    }
+    #title{
+        font-size: 45px;
+    }
+    .info{
+        font-size: 25px;
+    }
 
+    #easy,#medium,#hard{
+        font-size: 20px;
+
+
+    }
 
 
 }

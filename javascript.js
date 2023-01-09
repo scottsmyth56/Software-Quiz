@@ -331,19 +331,19 @@ let resultsMessage = document.getElementById("results-message")
 
 function endQuiz() {
 
-     const resultsMenuButton = document.getElementById('ResultsMenu-button');
-     resultsMenuButton.addEventListener('click', function () {
-      
-            window.location.reload();
-      
-          
-});
+    const resultsMenuButton = document.getElementById('ResultsMenu-button');
+    resultsMenuButton.addEventListener('click', function () {
+
+        window.location.reload();
+
+
+    });
     // Show the final score and a message based on the score 
     document.getElementById("title-results").style.display = "block";
     resultsMessage.style.display = "block";
     quizResults.style.display = "flex";
-    document.getElementById("results-username").innerHTML = username.value;
-    document.getElementById("results-score").innerHTML = `Score: ${score}/${quiz[currentDifficulty].length}`
+    let player = username.value;
+    document.getElementById("results-score").innerHTML = ` ${player}'s Score: ${score}/${quiz[currentDifficulty].length}`
 
     if (score < (quiz[currentDifficulty].length) / 2) {
         resultsMessage.innerHTML = "Hard Luck!  Please Try Again";
