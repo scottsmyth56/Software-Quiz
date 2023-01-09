@@ -140,13 +140,15 @@ button:hover {
 }
 
 #reset-button,
-#menu-button {
+#menu-button,
+#ResultsMenu-button {
     padding: 5px;
     width: 100px;
     font-size: 17px;
     text-transform: uppercase;
     letter-spacing: 3px;
 }
+
 
 #question-outer {
     display: flex;

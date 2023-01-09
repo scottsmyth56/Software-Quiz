@@ -218,10 +218,14 @@ let score = 0;
 
 const resetButton = document.getElementById('reset-button');
 const startMenuButton = document.getElementById('menu-button');
+// const resultsMenuButton = document.getElementById('ResultsMenu-button');
 quizResults = document.getElementById("quiz-results");
 quizQuestions = document.getElementById("quiz-questions");
 quizAnswers = document.getElementById("quiz-answers");
 resetButton.addEventListener('click', resetQuiz);
+startMenuButton.addEventListener('click', function () {
+    window.location.reload();
+});
 
 remaining = (quiz[currentDifficulty].length) - 1;
 
@@ -326,6 +330,14 @@ let resultsMessage = document.getElementById("results-message")
 
 
 function endQuiz() {
+
+     const resultsMenuButton = document.getElementById('ResultsMenu-button');
+     resultsMenuButton.addEventListener('click', function () {
+      
+            window.location.reload();
+      
+          
+});
     // Show the final score and a message based on the score 
     document.getElementById("title-results").style.display = "block";
     resultsMessage.style.display = "block";
@@ -333,13 +345,14 @@ function endQuiz() {
     document.getElementById("results-username").innerHTML = username.value;
     document.getElementById("results-score").innerHTML = `Score: ${score}/${quiz[currentDifficulty].length}`
 
-    if (score > (quiz[currentDifficulty].length) / 2) {
-        resultsMessage.innerHTML = "Hard Luck! Please Try Again";
+    if (score < (quiz[currentDifficulty].length) / 2) {
+        resultsMessage.innerHTML = "Hard Luck!  Please Try Again";
     } else {
-        resultsMessage.innerHTML = "Well Done! You Passed";
+        resultsMessage.innerHTML = "Well Done!  You Passed";
     }
     document.getElementById("reset-button").style.display = "none";
     document.getElementById("quiz-container").style.display = "none";
+    document.getElementById("menu-button").style.display = "block";
     quizQuestions.innerHTML = "";
     quizAnswers.innerHTML = "";
     stopTimer();
