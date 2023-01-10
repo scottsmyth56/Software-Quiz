@@ -1,307 +1,246 @@
 @import url('https://fonts.googleapis.com/css2?family=Anybody&display=swap');
-
-html {
-    background: linear-gradient(to bottom, rgb(9 9 9 / 75%), rgb(0 0 0 / 38%)), url("../images/background.jpg") no-repeat center center;
-    background-size: cover;
-    min-height: 100%;
+ html {
+     background: linear-gradient(to bottom, rgb(9 9 9 / 75%), rgb(0 0 0 / 38%)), url("../images/background.jpg") no-repeat center center;
+     background-size: cover;
+     min-height: 100%;
 }
-
-body {
-    font-family: 'Anybody', cursive;
-    overflow: hidden;
+ body {
+     font-family: 'Anybody', cursive;
+     overflow: hidden;
 }
-
-#content {
-    display: grid;
-    place-items: center;
-    min-height: 100vh;
+ #content {
+     display: grid;
+     place-items: center;
+     min-height: 100vh;
 }
-
-#difficulty-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    margin-top: 20px;
+ #difficulty-buttons {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding: 10px;
+     margin-top: 20px;
 }
-
-button {
-    padding: 10px 20px;
-    background: none;
-    border: 2px solid #3498db;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    margin: 5px;
-    width: 300px;
-    transition: all .4s ease-in-out;
+ button {
+     padding: 10px 20px;
+     background: none;
+     border: 2px solid #3498db;
+     color: white;
+     font-size: 16px;
+     cursor: pointer;
+     margin: 5px;
+     width: 300px;
+     transition: all .4s ease-in-out;
 }
-
-button:hover {
-    background-color: #3498db;
-    border: 2px solid #182837;
-    transform: scale(1.1);
+ button:hover {
+     background-color: #3498db;
+     border: 2px solid #182837;
+     transform: scale(1.1);
 }
-
-#title {
-    text-align: center;
-    font-size: 35px;
-    color: #3498db;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    font-weight: bolder;
+ #title {
+     text-align: center;
+     font-size: 35px;
+     color: #3498db;
+     letter-spacing: 4px;
+     text-transform: uppercase;
+     font-weight: bolder;
 }
-
-#title-results {
-    text-align: center;
-    font-size: 35px;
-    color: #3498db;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    font-weight: bolder;
-    display: none;
+ #title-results {
+     text-align: center;
+     font-size: 35px;
+     color: #3498db;
+     letter-spacing: 4px;
+     text-transform: uppercase;
+     font-weight: bolder;
+     display: none;
 }
-
-#username-form {
-    text-align: center;
-    margin-top: 20px;
+ #username-form {
+     text-align: center;
+     margin-top: 20px;
 }
-
-.info {
-    text-align: center;
-    color: white;
-    text-transform: uppercase;
-    font-size: 20px;
+ .info {
+     text-align: center;
+     color: white;
+     text-transform: uppercase;
+     font-size: 20px;
 }
-
-#score,
-#time,
-#remaining,
-#user-div {
-    display: none;
-    color: white;
-    font-size: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin: 5px;
+ #score, #time, #remaining, #user-div {
+     display: none;
+     color: white;
+     font-size: 20px;
+     text-transform: uppercase;
+     letter-spacing: 2px;
+     margin: 5px;
 }
-
-#quiz-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 80vh;
-    flex-direction: column;
+ #quiz-container {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 80vh;
+     flex-direction: column;
 }
-
-#quiz-questions {
-    text-align: center;
-    color: white;
-    font-size: 20px;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-    display: block;
-    height: 100%;
-    margin-top: 50px;
-    margin-bottom: 50px;
+ #quiz-questions {
+     text-align: center;
+     color: white;
+     font-size: 20px;
+     text-transform: uppercase;
+     margin-bottom: 15px;
+     display: block;
+     height: 100%;
+     margin-top: 50px;
+     margin-bottom: 50px;
 }
-
-#easy,
-#medium,
-#hard {
-    font-size: 15px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+ #easy, #medium, #hard {
+     font-size: 15px;
+     text-transform: uppercase;
+     letter-spacing: 2px;
 }
-
-#quiz-answers {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
+ #quiz-answers {
+     text-align: center;
+     display: flex;
+     flex-direction: column;
 }
-
-#username-label {
-    color: white;
-    display: block;
-    margin-bottom: 5px;
-    text-transform: capitalize;
+ #username-label {
+     color: white;
+     display: block;
+     margin-bottom: 5px;
+     text-transform: capitalize;
 }
-
-#username {
-    background: none;
-    border: 2px solid #3498db;
-    padding: 5px;
-    color: white;
-    font-size: 15px;
+ #username {
+     background: none;
+     border: 2px solid #3498db;
+     padding: 5px;
+     color: white;
+     font-size: 15px;
 }
-
-#reset-button,
-#menu-button,
-#ResultsMenu-button {
-    padding: 5px;
-    width: 100px;
-    font-size: 17px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
+ #reset-button, #menu-button, #ResultsMenu-button {
+     padding: 5px;
+     width: 100px;
+     font-size: 17px;
+     text-transform: uppercase;
+     letter-spacing: 3px;
 }
-
-#question-outer {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
+ #question-outer {
+     display: flex;
+     width: 100%;
+     justify-content: center;
+     align-items: center;
 }
-
-#quiz-results {
-    display: none;
-    width: 100%;
-    color: white;
-    font-size: 30px;
-    text-transform: uppercase;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+ #quiz-results {
+     display: none;
+     width: 100%;
+     color: white;
+     font-size: 30px;
+     text-transform: uppercase;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
 }
-
-#menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
+ #menu {
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     width: 100%;
 }
-
-#game-info {
-    display: flex;
-    flex-direction: row;
+ #game-info {
+     display: flex;
+     flex-direction: row;
 }
-
-#quiz {
-    display: none;
+ #quiz {
+     display: none;
 }
-
-#outer-game-info {
-    display: flex;
-    justify-content: center;
+ #outer-game-info {
+     display: flex;
+     justify-content: center;
 }
-
-.answer-btn {
-    text-transform: capitalize;
-    width: 500px;
-    font-size: 20px;
+ .answer-btn {
+     text-transform: capitalize;
+     width: 500px;
+     font-size: 20px;
 }
-
-#results-message {
-    display: none;
+ #results-message {
+     display: none;
 }
-
-@media screen and (max-width: 350px) {
-
-#answer-btn{
-    width: 200px;
-    font-size: 13px;
-
-}
-
-
-}
-
-@media screen and (max-width: 400px) {
-
-    #score,
-    #time,
-    #remaining,
-    #user-div {
-        font-size: 15px;
+ @media screen and (max-width: 350px) {
+     #answer-btn{
+         width: 200px;
+         font-size: 13px;
     }
 }
-
-@media screen and (max-width: 460px) {
-    #title {
-        font-size: 25px;
-        padding: 10px;
-    }
-
-    .info {
-        font-size: 12px;
-        padding: 5px;
-    }
-
-    #quiz-questions {
-        margin-top: 50px;
-        margin-bottom: 50px;
-        font-size: 17px;
-        padding: 15px;
-    }
-    #quiz-results{
-        font-size: 20px;
-    }
-
-    button:hover {
-        border: 2px solid #3498db; 
-        background: none;
-        transform: none;
-      }
-
-   
-}
-
-@media screen and (max-width: 900px) {
-    #game-info {
-        flex-direction: column;
-    }
-
-    .answer-btn {
-        width: 300px;
-        font-size: 17px;
-    }
-
-    #quiz-container {
-        min-height: 80vh;
-    }
-
-    #quiz-questions {
-        margin-top: 50px;
-        margin-bottom: 50px;
+ @media screen and (max-width: 400px) {
+     #score, #time, #remaining, #user-div {
+         font-size: 15px;
     }
 }
-
-@media screen and (min-width: 1000px) {
-    #quiz-questions {
-        margin-top: 50px;
-        margin-bottom: 50px;
-        padding: 20px;
+ @media screen and (max-width: 460px) {
+     #title {
+         font-size: 25px;
+         padding: 10px;
+    }
+     .info {
+         font-size: 12px;
+         padding: 5px;
+    }
+     #quiz-questions {
+         margin-top: 50px;
+         margin-bottom: 50px;
+         font-size: 17px;
+         padding: 15px;
+    }
+     #quiz-results{
+         font-size: 20px;
+    }
+     button:hover {
+         border: 2px solid #3498db;
+         background: none;
+         transform: none;
     }
 }
-
-@media screen and (min-width: 1600px) {
-    .answer-btn {
-        text-transform: capitalize;
-        width: 700px;
-        font-size: 20px;
+ @media screen and (max-width: 900px) {
+     #game-info {
+         flex-direction: column;
     }
-
-    #quiz-questions {
-        margin-top: 50px;
-        margin-bottom: 50px;
-        font-size: 30px;
+     .answer-btn {
+         width: 300px;
+         font-size: 17px;
     }
-
-    #title {
-        font-size: 45px;
+     #quiz-container {
+         min-height: 80vh;
     }
-
-    .info {
-        font-size: 25px;
-    }
-
-    #easy,
-    #medium,
-    #hard {
-        font-size: 20px;
-    }
-
-    #username-label {
-        font-size: 20px;
+     #quiz-questions {
+         margin-top: 50px;
+         margin-bottom: 50px;
     }
 }
+ @media screen and (min-width: 1000px) {
+     #quiz-questions {
+         margin-top: 50px;
+         margin-bottom: 50px;
+         padding: 20px;
+    }
+}
+ @media screen and (min-width: 1600px) {
+     .answer-btn {
+         text-transform: capitalize;
+         width: 700px;
+         font-size: 20px;
+    }
+     #quiz-questions {
+         margin-top: 50px;
+         margin-bottom: 50px;
+         font-size: 30px;
+    }
+     #title {
+         font-size: 45px;
+    }
+     .info {
+         font-size: 25px;
+    }
+     #easy, #medium, #hard {
+         font-size: 20px;
+    }
+     #username-label {
+         font-size: 20px;
+    }
+}
+ 

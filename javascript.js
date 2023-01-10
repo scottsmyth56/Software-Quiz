@@ -218,20 +218,20 @@ let score = 0;
 
 const resetButton = document.getElementById('reset-button');
 const startMenuButton = document.getElementById('menu-button');
-quizResults = document.getElementById("quiz-results");
-quizQuestions = document.getElementById("quiz-questions");
-quizAnswers = document.getElementById("quiz-answers");
+let quizResults = document.getElementById("quiz-results");
+let quizQuestions = document.getElementById("quiz-questions");
+let quizAnswers = document.getElementById("quiz-answers");
+var username = document.querySelector("#username").value;
 resetButton.addEventListener('click', resetQuiz);
 startMenuButton.addEventListener('click', function() {
     window.location.reload();
 });
 
-remaining = (quiz[currentDifficulty].length) - 1;
+let remaining = (quiz[currentDifficulty].length) - 1;
 
 
 document.addEventListener("DOMContentLoaded", () => {
     // Display the username and difficulty buttons
-    const username = document.getElementById("username").value;
     const easyBtn = document.getElementById("easy");
     const mediumBtn = document.getElementById("medium");
     const hardBtn = document.getElementById("hard");
@@ -250,7 +250,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function startQuiz(difficulty) {
     // Update the current difficulty and reset the score and current index
-    const username = document.querySelector("#username").value;
+    var username = document.querySelector("#username").value;
     if (username === "") {
         alert("Please enter your username");
         return;
@@ -325,7 +325,7 @@ function checkAnswer(event) {
 
 let timer = 0;
 let interval;
-let resultsMessage = document.getElementById("results-message")
+ resultsMessage = document.getElementById("results-message");
 
 
 function endQuiz() {
@@ -341,8 +341,8 @@ function endQuiz() {
     document.getElementById("title-results").style.display = "block";
     resultsMessage.style.display = "block";
     quizResults.style.display = "flex";
-    let player = username.value;
-    document.getElementById("results-score").innerHTML = ` ${player}'s Score: ${score}/${quiz[currentDifficulty].length}`
+    let player = document.querySelector("#username").value;
+    document.getElementById("results-score").innerHTML = ` ${player}'s Score: ${score}/${quiz[currentDifficulty].length}`;
 
     if (score < (quiz[currentDifficulty].length) / 2) {
         resultsMessage.innerHTML = "Hard Luck!  Please Try Again";
