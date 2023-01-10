@@ -20,7 +20,6 @@ The Deployed Site is available [HERE](https://scottsmyth56.github.io/Software-Sa
 + [Design](#design "Design")
   + [Colour](#colour "Colour")
   + [Typography](#typography "Typography")
-  + [Imagery](#imagery "Imagery")
   + [Layout](#layout "Layout")
 + [Features](#features "Features")
   + [Current Features](#current-features "Current Features")
@@ -62,7 +61,34 @@ This Site was mainly developed to attract an audience with an interest in Softwa
 The aim of the colour scheme was to keep in line with the overall quiz theme being Software Development, After some Research i found Implementing  shades of blue and darker blue achieved a 
 "Digital" feel to overall site enhancing user experience. The digital background image also pushes the more "Digital/Computer" theme to the user at first view.
 
-![Colour Palette](assets/images-readme/Colour-pallette.png)
+![Colour Palette](assets/images/images-readme/Software.png)
+![background image](assets/images/background.jpg)
+
+### Typography
+
+The main typography used throughout the site was `Anybody`.This was chosen to further display the feeling of a digital theme but still be readable for the user. The font works well in all weights and looks professional throughout.
+
+
+### Layout
+
+The Layout for this site is simple and works perfectly for the overall goal of the site. Users can easily focus on the quiz game without taking time to navigating or trying to understand actions. 
+
+The Wireframes for the site layout can be viewed below
+
+
+#### Start Menu 
+
+![start scene wireframe](assets/images/images-readme/start_menu_wireframe.png)
+
+
+#### Gsme Scene 
+
+![game scene wireframe](assets/images/images-readme/game_scene_wireframe.png)
+
+
+#### Results Scene
+
+![results scene wireframe](assets/images/images-readme/results_scene_wireframe.png)
 
 
 
