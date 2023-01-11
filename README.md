@@ -6,7 +6,7 @@ The Objective of this site is to test users on their Software Knowledge through 
 - Medium - For users with sufficient softare development knowledge.
 - Hard - For users individuals who possess a significant amount of expertise in software development.
 
-![Site view across devices](assets/images/images-readme/Media-Responsiveness.png)
+![Site view across devices](assets/images-readme/Media-Responsiveness.png)
 
 
 The Deployed Site is available [HERE](https://scottsmyth56.github.io/Software-Savvy-Quiz/)
@@ -60,8 +60,8 @@ This Site was mainly developed to attract an audience with an interest in Softwa
 The aim of the colour scheme was to keep in line with the overall quiz theme being Software Development, After some Research i found Implementing  shades of blue and darker blue achieved a 
 "Digital" feel to overall site enhancing user experience. The digital background image also pushes the more "Digital/Computer" theme to the user at first view.
 
-![Colour Palette](assets/images/images-readme/Software.png)
-![background image](assets/images/background.jpg)
+![Colour Palette](assets/images-readme/Software.png)
+![background image](assets/images-site/background.jpg)
 
 ### Typography
 
@@ -77,17 +77,17 @@ The Wireframes for the site layout can be viewed below
 
 #### Start Menu 
 
-![start scene wireframe](assets/images/images-readme/start_menu_wireframe.png)
+![start scene wireframe](assets/images-readme/start_menu_wireframe.png)
 
 
 #### Gsme Scene 
 
-![game scene wireframe](assets/images/images-readme/game_scene_wireframe.png)
+![game scene wireframe](assets/images-readme/game_scene_wireframe.png)
 
 
 #### Results Scene
 
-![results scene wireframe](assets/images/images-readme/results_scene_wireframe.png)
+![results scene wireframe](assets/images-readme/results_scene_wireframe.png)
 
 
 ## Features 
@@ -98,14 +98,14 @@ The Wireframes for the site layout can be viewed below
 
 This is the landing page for the user before they start the quiz. Here the user is required to enter a username and choose a difficulty level before the game starts.
 
-![Game Start Menu](assets/images/images-readme/feature-StartMenu.png)
+![Game Start Menu](assets/images-readme/feature-StartMenu.png)
 
 
 #### Game Information 
 
 This block of information provides realtime information to the user as they play through the quiz. The Score will increment by one when a user answers a question correctly. The Questions Remaining information displays the amount of questions remaining. The Timer shows the current elapsed time from the start of the quiz.
 
-![Game Scene](assets/images/images-readme/feature-GameInfo.png)
+![Game Scene](assets/images-readme/feature-GameInfo.png)
 
 
 #### Quiz 
@@ -113,7 +113,7 @@ This block of information provides realtime information to the user as they play
 This is the primary feature in the site, Here a question is displayed to the user with a choice of 4 possible answers. A new question and new answers are prompted everytime a user chooses an option. 
 
 
-![Quiz](assets/images/images-readme/feature-quiz.png)
+![Quiz](assets/images-readme/feature-quiz.png)
 
 
 #### Results Scene
@@ -121,7 +121,7 @@ This is the primary feature in the site, Here a question is displayed to the use
 This is the final feature that is displayed to the user before starting the game again. Here the user's score and total time is displayed along with a message depicting whether the user passed the quiz or failed.
 
 
-![Results scene](assets/images/images-readme/feature-resultsScene.png)
+![Results scene](assets/images-readme/feature-resultsScene.png)
 
 
 ### Future Features
@@ -139,20 +139,20 @@ This is the final feature that is displayed to the user before starting the game
 
 As the Quiz was developed on one HTML page the site performed well in Lighthouse Testing.
 
-![Lighthouse Test](assets/images/images-readme/Desktop-LighthouseTest.png)
+![Lighthouse Test](assets/images-readme/Desktop-LighthouseTest.png)
 
 ### HTML Validation
 
 After Validating the HTML code throughout and making final changes. The HTML code has no issues throughout.
 
-![HTML Validation](assets/images/images-readme/html-validation.png)
+![HTML Validation](assets/images-readme/html-validation.png)
 
 
 ### CSS Validation
 
 CSS passed validation with no errors.
 
-![CSS Validation](assets/images/images-readme/css-validation.png)
+![CSS Validation](assets/images-readme/css-validation.png)
 
 
 ### Javascript Validation
@@ -161,18 +161,18 @@ This was currently my first time using JSHint so naturally some of the warnings 
 
 #### NOTE : I Installed NodeJs and JShint Extension on VSCode Locally to test for errors in JS code instead of jshint online checker.
 
-![JSHINT problems](assets/images/images-readme/jshint(problems).png)
+![JSHINT problems](assets/images-readme/jshint(problems).png)
 
 #### Solution 
 
 I changed the config file in the jshint.options to use `ESVersion:6`. This cleared all of the problems.
 
-![JSHINT solution](assets/images/images-readme/jshint(solution).png)
+![JSHINT solution](assets/images-readme/jshint(solution).png)
 
 
 #### Validated with no warnings or errors
 
-![JS validated](assets/images/images-readme/jshint(noProblems).png)
+![JS validated](assets/images-readme/jshint(noProblems).png)
 
 
 ### Unfixed Bugs
