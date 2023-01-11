@@ -48,7 +48,78 @@ const quiz = {
                 "int value = c.input.readint();"
             ],
             answer: 0
+        },
+        {
+            prompt: "What is a variable in programming?",
+            choices: [
+                "A value that can change during the execution of a program",
+                "A set of instructions for performing a specific task",
+                "A way to organize and manage the development process of a software project",
+                "A type of programming language"
+            ],
+            answer: 0
+        },
+        {
+            prompt: "What is an object in programming?",
+            choices: [
+                "An instance of a class, which can have properties and methods",
+                "A way to iterate over a collection of elements",
+                "A way to perform a specific task",
+                "A type of programming language"
+            ],
+            answer: 0
+        },
+        {
+            prompt: "What is a function in programming?",
+            choices: [
+                "An instance of a class",
+                "A way to iterate over a collection of elements",
+                "A reusable block of code that can take input and return output",
+                "A design flaw in a user interface"
+            ],
+            answer: 2
+        },
+        {
+            prompt: "What is an array in programming?",
+            choices: [
+                " A tool for managing changes to documents",
+                "A network protocol for file transfer",
+                "A collection of elements that are accessed by index ",
+                "A type of programming language"
+            ],
+            answer: 2
+        },
+        {
+            prompt: "Inside which HTML element do we put the JavaScript?",
+            choices: [
+                "scripting",
+                "script",
+                "js",
+                "head"
+            ],
+            answer: 1
+        },
+        {
+            prompt: "How do you write 'Hello World' in an alert box?",
+            choices: [
+                "msgBox('Hello World');",
+                "alert('Hello World');",
+                "alertBox('Hello World');",
+                "msg('Hello World');"
+            ],
+            answer: 1
+        },
+        {
+            prompt: "How do you create a function in JavaScript?",
+            choices: [
+                "function myFunction()",
+                "function = myFunction()",
+                "function:myFunction()",
+                "new myfunction()"
+            ],
+            answer: 0
         }
+        
     ],
     medium: [{
             prompt: "One or more defects occurring in the computer software that prevents the software from working is called",
