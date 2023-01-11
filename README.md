@@ -25,7 +25,6 @@ The Deployed Site is available [HERE](https://scottsmyth56.github.io/Software-Sa
   + [Current Features](#current-features "Current Features")
   + [Future Features](#future-features "Future Features")
 + [Testing](#testing "Testing")
-  + [Form Data](#form-data "Form Data")
   + [Lighthouse](#lighthouse "Lighthouse")
   + [HTML Validation](#html-validation "HTML Validation")
   + [CSS Validation](#css-validation "CSS Validation")
@@ -37,7 +36,7 @@ The Deployed Site is available [HERE](https://scottsmyth56.github.io/Software-Sa
 + [Credit](#credit "Credit")
   + [Content](#content "Content")
   + [Media](#media "Media")
-  + [Code](#code "Code")
+  
   
   
 ## UX
@@ -203,8 +202,9 @@ The site was deployed to GitHub pages. The steps to deploy are as follows:
 - From the source section drop-down menu, select the Master Branch
 - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
 
-### Cloning for Further Development
+### Cloning for Further Development(GitPod)
 
+ - Open Gitpod
  - On the search bar, put the repository you want to clone https://github.com/scottsmyth56/Software-Savvy-Quiz.git and press Enter 
  - Gitpod will open the workspace, with the repository cloned and ready to use.
  - You can find your cloned repository on the left sidebar,
@@ -212,6 +212,17 @@ The site was deployed to GitHub pages. The steps to deploy are as follows:
  - When you are ready to push your changes, open the terminal and run git add . to add all the changes,
  - Commit your changes by running git commit -m "your commit message",
  - Push your changes by running git push.
+
+### Cloning for Further Development ( Locally )
+ - Make sure you have Git installed on your computer. If you don't have it already, you can download it from the official website (https://git-scm.com/)
+ - Open a terminal window (on Windows, Git Bash is a good option)
+ - Navigate to the directory where you want to clone the repository using the cd command. For example, to navigate to the Documents folder, you would use the command cd Documents.
+- Use the following command to clone the repository: git clone https://github.com/scottsmyth56/Software-Savvy-Quiz.git
+ - The command will create a new directory called "Software-Savvy-Quiz" in the current directory, and will copy all the files from the repository into that directory.
+ - Navigate into the newly cloned directory by running cd Software-Savvy-Quiz.
+ - you can check the content of the cloned repository by running ls command
+ - Make sure to update your local copy with the remote repository by running git pull command
+ - you can start to use the cloned repository as you wish
 
 The Deployed Site is available [HERE](https://scottsmyth56.github.io/Software-Savvy-Quiz/)
 
@@ -223,6 +234,8 @@ The Deployed Site is available [HERE](https://scottsmyth56.github.io/Software-Sa
 - [Quiz Questions](https://www.sanfoundry.com/)
 - [Quiz Questions](https://study.com/learn/software-development-quizzes.html)
 - [Quiz Questions](https://quizizz.com/admin/quiz/5b8359ac6a2a990019c581e1/software-and-software-development)
+
+### Media
 
 ### Imagery
 
