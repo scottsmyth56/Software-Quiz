@@ -346,6 +346,67 @@ const quiz = {
             ],
             answer: 2
         },
+        {
+            prompt: "A software life cycle model which builds a throwaway version.",
+            choices: [
+                "Linear Sequential Model",
+                "Prototype Model",
+                "Both Answers are correct",
+                "None of the above"
+            ],
+            answer: 1
+        },
+        {
+            prompt: "A type of Software Life Cycle Activity that involves testing by the original developer.",
+            choices: [
+                "Acceptance Testing",
+                "System Testing",
+                "Regression Testing",
+                "Unit Testing"
+            ],
+            answer: 3
+        },
+        {
+            prompt: "Which of the following are examples of traditional process models?",
+            choices: [
+                "Waterfall, XP, Spiral",
+                "Waterfall, Incremental, Spiral",
+                "Spiral, XP, Agile",
+                "None of the above"
+            ],
+            answer: 1
+        },
+        {
+            prompt: "Which Design Pattern should you use when....you want to use an existing class, and its interface does not match the one you need.",
+            choices: [
+                "Adapter",
+                "Decorator",
+                "Proxy",
+                "Mediator"
+            ],
+            answer: 0
+        },
+
+        {
+            prompt: "CMMI stands for",
+            choices: [
+                "Critical Maturity Model Integrated",
+                "Critical Modeling Maturity Integrated",
+                "Capability Modeling Maturity Integrated",
+                "Capability Maturity Model Integrated"
+            ],
+            answer: 3
+        },
+        {
+            prompt: "Which Design Pattern should you use when.... a system should be configured with one of multiple families of products",
+            choices: [
+                "Builder",
+                "Abstract Factory",
+                "Factory Method",
+                "Composite"
+            ],
+            answer: 1
+        },
 
 
     ]
