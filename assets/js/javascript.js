@@ -196,6 +196,74 @@ const quiz = {
                 "The process of planning, creating, testing, and maintaining software"
             ],
             answer: 3
+        },
+        {
+            prompt: "In which phase does the programmer make sure that software operate without bugs?",
+            choices: [
+                "Deployment",
+                "Testing",
+                "Documentation",
+                "Implementation and Integration"
+            ],
+            answer: 1
+        },
+        {
+            prompt: "Which phase of the software development (life) cycle should occur directly after the planning?",
+            choices: [
+                "Defining the problem",
+                "Maintenance",
+                "Testing",
+                "Implementation"
+            ],
+            answer: 3
+        },
+        {
+            prompt: "Flow charts are used in programming to solve a mathematical question",
+            choices: [
+                "True",
+                "False"
+            ],
+            answer: 0
+        },
+        {
+            prompt: "Microsoft Office and similar software is an example of:",
+            choices: [
+                "bespoke",
+                "custom made",
+                "open source",
+                "off the shelf"
+            ],
+            answer: 3
+        },
+        {
+            prompt: "Certain computing projects in education and science are free and maintained by a diverse community of people. Their software is usually distributed as:",
+            choices: [
+                "Charity",
+                "Off the shelf",
+                "Open source",
+                "Subscription"
+            ],
+            answer: 2
+        },
+        {
+            prompt: "Using the waterfall SDM, a prototype can be developed.",
+            choices: [
+                "During the Design Phase",
+                "During the Development Phase",
+                "During the Implementation Phase",
+                "During the Analysis Phase"
+            ],
+            answer: 0
+        },
+        {
+            prompt: "Statements that can only run under certain conditions or situations such as: if the seat is taken, then move to the next available seat.",
+            choices: [
+                "abstractions",
+                "binary",
+                "conditionals",
+                "variable"
+            ],
+            answer: 2
         }
     ],
     hard: [{
