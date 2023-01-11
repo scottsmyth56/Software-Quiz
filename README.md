@@ -91,4 +91,146 @@ The Wireframes for the site layout can be viewed below
 ![results scene wireframe](assets/images/images-readme/results_scene_wireframe.png)
 
 
+## Features 
+
+### Current Features 
+
+#### Game Start Menu
+
+This is the landing page for the user before they start the quiz. Here the user is required to enter a username and choose a difficulty level before the game starts.
+
+![Game Start Menu](assets/images/images-readme/feature-StartMenu.png)
+
+
+#### Game Information 
+
+This block of information provides realtime information to the user as they play through the quiz. The Score will increment by one when a user answers a question correctly. The Questions Remaining information displays the amount of questions remaining. The Timer shows the current elapsed time from the start of the quiz.
+
+![Game Scene](assets/images/images-readme/feature-GameInfo.png)
+
+
+#### Quiz 
+
+This is the primary feature in the site, Here a question is displayed to the user with a choice of 4 possible answers. A new question and new answers are prompted everytime a user chooses an option. 
+
+
+![Quiz](assets/images/images-readme/feature-quiz.png)
+
+
+#### Results Scene
+
+This is the final feature that is displayed to the user before starting the game again. Here the user's score and total time is displayed along with a message depicting whether the user passed the quiz or failed.
+
+
+![Results scene](assets/images/images-readme/feature-resultsScene.png)
+
+
+### Future Features
+
+- Leaderboard.
+- Invite Friends for Head to Head.
+- Share Score on Social Media.
+- Choose Different subjects based in Software Development.
+- Hint Functionality.
+
+
+## Testing
+
+### Lighthouse 
+
+As the Quiz was developed on one HTML page the site performed well in Lighthouse Testing.
+
+![Lighthouse Test](assets/images/images-readme/Desktop-LighthouseTest.png)
+
+### HTML Validation
+
+After Validating the HTML code throughout and making final changes. The HTML code has no issues throughout.
+
+![HTML Validation](assets/images/images-readme/html-validation.png)
+
+
+### CSS Validation
+
+CSS passed validation with no errors.
+
+![CSS Validation](assets/images/images-readme/css-validation.png)
+
+
+### Javascript Validation
+
+This was currently my first time using JSHint so naturally some of the warnings it returned to me were unseen before by me. The code itself did not have many errors except missing a ` ; ` here and there. One Problem arose with the 'ESVersion' the current `ESVersion : 5` did not allow `For` `Let` `Const` as seen below.
+
+#### NOTE : I Installed NodeJs and JShint Extension on VSCode Locally to test for errors in JS code instead of jshint online checker.
+
+![JSHINT problems](assets/images/images-readme/jshint(problems).png)
+
+#### Solution 
+
+I changed the config file in the jshint.options to use `ESVersion:6`. This cleared all of the problems.
+
+![JSHINT solution](assets/images/images-readme/jshint(solution).png)
+
+
+#### Validated with no warnings or errors
+
+![JS validated](assets/images/images-readme/jshint(noProblems).png)
+
+
+### Unfixed Bugs
+##### No Known Unfixed Bugs.
+
+## Technologies Used
+
+
+### Languages Used
+- HTML5
+- CSS3
+- Javascript
+
+### External Programs and Libraries Used
+- Google Fonts - for the font family.
+- Font Awesome - to add icons throughout the site.
+- GitPod - to creat my html files & styling sheet before pushing the project to Github.
+- GitHub - to store my repository for submission.
+- Am I Responsive? - to ensure the project looked good across all devices.
+- Favicon - to provide the code & image for the icon in the tab bar.
+- MockFlow Wireframe - to create Wireframes for the site layout.
+
+## Deployment
+The site was deployed to GitHub pages. The steps to deploy are as follows:
+
+- In the GitHub repository, navigate to the Settings tab
+- From the source section drop-down menu, select the Master Branch
+- Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+
+### Cloning for Further Development
+
+ - On the search bar, put the repository you want to clone https://github.com/scottsmyth56/Software-Savvy-Quiz.git and press Enter 
+ - Gitpod will open the workspace, with the repository cloned and ready to use.
+ - You can find your cloned repository on the left sidebar,
+ - You can start working on the codebase, make changes and save them
+ - When you are ready to push your changes, open the terminal and run git add . to add all the changes,
+ - Commit your changes by running git commit -m "your commit message",
+ - Push your changes by running git push.
+
+The Deployed Site is available [HERE](https://scottsmyth56.github.io/Software-Savvy-Quiz/)
+
+
+## Credit 
+
+### Content
+
+- [Quiz Questions](https://www.sanfoundry.com/)
+- [Quiz Questions](https://study.com/learn/software-development-quizzes.html)
+- [Quiz Questions](https://quizizz.com/admin/quiz/5b8359ac6a2a990019c581e1/software-and-software-development)
+
+### Imagery
+
+- Background image sourced from  https://www.pexels.com/.
+
+ Icons sourced from:
+- https://icons8.com/
+- https://fontawesome.com/
+
+
 
